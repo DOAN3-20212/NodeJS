@@ -12,7 +12,12 @@ const initWebRoute = (app) => {
 
     router.get("/productplant", homeController.getProductPlant)
 
-    router.get("/productplant/:id", homeController.getListWorker)
+    router.get("/productplant/:id", homeController.getProductPlantById)
+
+    router.get("/productplant/worker/:id", homeController.getListWorker)
+
+    router.get("/productplant/task/:id", homeController.getListTask)
+
 
     return app.use('/', router)
 }
